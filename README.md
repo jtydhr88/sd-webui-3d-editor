@@ -21,6 +21,9 @@ Just like you install other extension of webui:
 3. install
 4. go to Installed, apply and restart UI
 
+## Known Issues
+1. currently, you need to manual resize browser at the first time to show up the canvas (I will try to figure out the solution soon)
+
 ## Credits
 Created by [jtydhr88](https://github.com/jtydhr88) and basing on [ThreeJS editor](https://github.com/mrdoob/three.js/tree/master/editor)
 
