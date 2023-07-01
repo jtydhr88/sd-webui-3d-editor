@@ -611,20 +611,6 @@
         border: solid 1px #5A5A5A;
     }
 
-    #tabs {
-        background-color: #1b1b1b;
-        border-top: 1px solid #222;
-    }
-
-    #tabs span {
-        color: #555;
-        border-right: 1px solid #222;
-    }
-
-    #tabs span.selected {
-        background-color: #111;
-    }
-
     #toolbar {
         background-color: #111;
     }
