@@ -13,7 +13,6 @@ await _import();
 (async function () {
     const container = gradioApp().querySelector('#threeD-editor-container');
 
-    console.log("111111");
     console.log(container);
 
     const parent = container.parentNode;

@@ -354,8 +354,11 @@ function Strings( config ) {
 			'viewport/info/objects': 'Objects',
 			'viewport/info/vertices': 'Vertices',
 			'viewport/info/triangles': 'Triangles',
-			'viewport/info/frametime': 'Frametime'
-
+			'viewport/info/frametime': 'Frametime',
+			'menubar/controlNet': 'ControlNet',
+			'menubar/controlNet/no_controlNet': 'No ControlNet',
+			'menubar/controlNet/send_to_txt2img': 'Send to txt2Img',
+			'menubar/controlNet/send_to_img2img': 'Send to img2Img',
 		},
 
 		fr: {
@@ -708,7 +711,11 @@ function Strings( config ) {
 			'viewport/info/objects': 'Objets',
 			'viewport/info/vertices': 'Sommets',
 			'viewport/info/triangles': 'Triangles',
-			'viewport/info/frametime': 'Temps de trame'
+			'viewport/info/frametime': 'Temps de trame',
+			'menubar/controlNet': 'ControlNet',
+			'menubar/controlNet/no_controlNet': 'No ControlNet',
+			'menubar/controlNet/send_to_txt2img': 'Send to txt2Img',
+			'menubar/controlNet/send_to_img2img': 'Send to img2Img',
 
 		},
 
@@ -1062,8 +1069,11 @@ function Strings( config ) {
 			'viewport/info/objects': '物体',
 			'viewport/info/vertices': '顶点',
 			'viewport/info/triangles': '三角形',
-			'viewport/info/frametime': '帧时'
-
+			'viewport/info/frametime': '帧时',
+			'menubar/controlNet': 'ControlNet',
+			'menubar/controlNet/no_controlNet': 'No ControlNet',
+			'menubar/controlNet/send_to_txt2img': 'Send to txt2Img',
+			'menubar/controlNet/send_to_img2img': 'Send to img2Img',
 		}
 
 	};
@@ -1072,7 +1082,13 @@ function Strings( config ) {
 
 		getKey: function ( key ) {
 
-			return values[ language ][ key ] || '???';
+			let value = values[ language ][ key ] || '???';
+
+			if (value === '???') {
+				value = key;
+			}
+
+			return value;
 
 		}
 

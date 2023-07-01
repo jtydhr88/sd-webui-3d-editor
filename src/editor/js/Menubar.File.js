@@ -4,7 +4,7 @@ import {zipSync, strToU8} from 'three/addons/libs/fflate.module.js';
 
 import {UIPanel, UIRow, UIHorizontalRule} from './libs/ui.js';
 
-function MenubarFile(editor, viewport) {
+function MenubarFile(editor) {
 
     const config = editor.config;
     const strings = editor.strings;
@@ -480,57 +480,6 @@ function MenubarFile(editor, viewport) {
 
     });
     options.add(option);
-
-    // Send to ControlNet - txt2img
-
-    option = new UIRow();
-    option.setClass('option');
-    option.setTextContent(strings.getKey('menubar/file/send_to_controlnet_txt'));
-    option.onClick(async function () {
-        var renderer = editor.currentRenderer;
-
-        renderer.render(editor.scene, editor.viewportCamera);
-
-        var dataURL = renderer.domElement.toDataURL("image/png");
-        var file = dataURLtoFile(dataURL, 'image.png');
-
-        var dt = new DataTransfer();
-        dt.items.add(file);
-
-        window.sendImageFunc3DEditor("txt2img", 0, dt);
-    });
-    options.add(option);
-
-    // Send to ControlNet - img2img
-
-    option = new UIRow();
-    option.setClass('option');
-    option.setTextContent(strings.getKey('menubar/file/send_to_controlnet_img'));
-    option.onClick(async function () {
-        var renderer = editor.currentRenderer;
-
-        renderer.render(editor.scene, editor.viewportCamera);
-
-        var dataURL = renderer.domElement.toDataURL("image/png");
-        var file = dataURLtoFile(dataURL, 'image.png');
-
-        var dt = new DataTransfer();
-        dt.items.add(file);
-
-        window.sendImageFunc3DEditor("img2img", 0, dt);
-    });
-    options.add(option);
-
-    function dataURLtoFile(dataurl, filename) {
-        var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
-            bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
-        while (n--) {
-            u8arr[n] = bstr.charCodeAt(n);
-        }
-        return new File([u8arr], filename, {type: mime});
-    }
-
-    //
 
     const link = document.createElement('a');
 

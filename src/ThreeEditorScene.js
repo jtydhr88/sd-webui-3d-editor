@@ -12,7 +12,7 @@ import {VRButton} from 'three/addons/webxr/VRButton.js';
 
 window.VRButton = VRButton;
 
-function ThreeEditorScene() {
+function ThreeEditorScene(controlNetNum) {
     const containerRef = useRef();
 
     useEffect(() => {
@@ -33,7 +33,7 @@ function ThreeEditorScene() {
 
         containerRef.current.appendChild(sidebar.dom);
 
-        const menubar = new Menubar(editor, viewport);
+        const menubar = new Menubar(editor, controlNetNum);
         containerRef.current.appendChild(menubar.dom);
 
         const resizer = new Resizer(editor);

@@ -8,17 +8,19 @@ import { MenubarView } from './Menubar.View.js';
 import { MenubarHelp } from './Menubar.Help.js';
 import { MenubarPlay } from './Menubar.Play.js';
 import { MenubarStatus } from './Menubar.Status.js';
+import { MenubarControlNet } from './Menubar.ControlNet.js';
 
-function Menubar( editor, viewport ) {
+function Menubar( editor, controlNetNum ) {
 
 	const container = new UIPanel();
 	container.setId( 'menubar' );
 
-	container.add( new MenubarFile( editor, viewport ) );
+	container.add( new MenubarFile( editor ) );
 	container.add( new MenubarEdit( editor ) );
 	container.add( new MenubarAdd( editor ) );
 	container.add( new MenubarView( editor ) );
 	container.add( new MenubarHelp( editor ) );
+	container.add( new MenubarControlNet( editor, controlNetNum ) );
 
 	container.add( new MenubarStatus( editor ) );
 

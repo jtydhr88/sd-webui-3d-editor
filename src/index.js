@@ -17,7 +17,7 @@ export default function App({controlNetNum}) {
                 <Container maxWidth="none">
                     <Grid container spacing={3}>
                         <Grid item xs={12} style={{height: '80vh'}}>
-                            <ThreeEditorScene/>
+                            <ThreeEditorScene controlNetNum={controlNetNum}/>
                         </Grid>
                     </Grid>
                 </Container>
