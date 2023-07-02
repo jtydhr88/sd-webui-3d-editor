@@ -90,7 +90,7 @@ function Loader( editor ) {
 					const { Rhino3dmLoader } = await import( 'three/addons/loaders/3DMLoader.js' );
 
 					const loader = new Rhino3dmLoader();
-					loader.setLibraryPath( '../examples/jsm/libs/rhino3dm/' );
+					loader.setLibraryPath( '/file=extensions/sd-webui-3d-editor/js/jsm/libs/rhino3dm/' );
 					loader.parse( contents, function ( object ) {
 
 						editor.execute( new AddObjectCommand( editor, object ) );
