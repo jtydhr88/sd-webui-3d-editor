@@ -199,7 +199,7 @@ function Loader( editor ) {
 					const { DRACOLoader } = await import( 'three/addons/loaders/DRACOLoader.js' );
 
 					const loader = new DRACOLoader();
-					loader.setDecoderPath( '../examples/jsm/libs/draco/' );
+					loader.setDecoderPath( '/file=extensions/sd-webui-3d-editor/js/jsm/libs/draco/' );
 					loader.parse( contents, function ( geometry ) {
 
 						let object;
@@ -269,10 +269,10 @@ function Loader( editor ) {
 					const { MeshoptDecoder } = await import( 'three/addons/libs/meshopt_decoder.module.js' );
 
 					const dracoLoader = new DRACOLoader();
-					dracoLoader.setDecoderPath( '../examples/jsm/libs/draco/gltf/' );
+					dracoLoader.setDecoderPath( '/file=extensions/sd-webui-3d-editor/js/jsm/libs/draco/gltf/' );
 
 					const ktx2Loader = new KTX2Loader();
-					ktx2Loader.setTranscoderPath( '../examples/jsm/libs/basis/' );
+					ktx2Loader.setTranscoderPath( '/file=extensions/sd-webui-3d-editor/js/jsm/libs/basis/' );
 
 					const loader = new GLTFLoader();
 					loader.setDRACOLoader( dracoLoader );
@@ -309,7 +309,7 @@ function Loader( editor ) {
 					const { GLTFLoader } = await import( 'three/addons/loaders/GLTFLoader.js' );
 
 					const dracoLoader = new DRACOLoader();
-					dracoLoader.setDecoderPath( '../examples/jsm/libs/draco/gltf/' );
+					dracoLoader.setDecoderPath( '/file=extensions/sd-webui-3d-editor/js/jsm/libs/draco/gltf/' );
 
 					const loader = new GLTFLoader( manager );
 					loader.setDRACOLoader( dracoLoader );
@@ -890,7 +890,7 @@ function Loader( editor ) {
 					const { GLTFLoader } = await import( 'three/addons/loaders/GLTFLoader.js' );
 
 					const dracoLoader = new DRACOLoader();
-					dracoLoader.setDecoderPath( '../examples/jsm/libs/draco/gltf/' );
+					dracoLoader.setDecoderPath( '/file=extensions/sd-webui-3d-editor/js/jsm/libs/draco/gltf/' );
 
 					const loader = new GLTFLoader();
 					loader.setDRACOLoader( dracoLoader );
@@ -918,7 +918,7 @@ function Loader( editor ) {
 					const { GLTFLoader } = await import( 'three/addons/loaders/GLTFLoader.js' );
 
 					const dracoLoader = new DRACOLoader();
-					dracoLoader.setDecoderPath( '../examples/jsm/libs/draco/gltf/' );
+					dracoLoader.setDecoderPath( '/file=extensions/sd-webui-3d-editor/js/jsm/libs/draco/gltf/' );
 
 					const loader = new GLTFLoader( manager );
 					loader.setDRACOLoader( dracoLoader );
