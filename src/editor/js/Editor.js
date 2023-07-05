@@ -7,6 +7,7 @@ import { Strings } from './Strings.js';
 import { Storage as _Storage } from './Storage.js';
 import { Selector } from './Viewport.Selector.js';
 import * as signals from 'signals'
+import {Importer} from "./Importer";
 
 window.signals = signals;
 
@@ -102,6 +103,9 @@ function Editor() {
 	this.selector = new Selector( this );
 
 	this.loader = new Loader( this );
+	this.importer = new Importer(this);
+
+	window.threeDEditorImportFileFromUrl = this.importer.importFileFromUrl;
 
 	this.camera = _DEFAULT_CAMERA.clone();
 
