@@ -15,7 +15,8 @@ function Toolbar( editor ) {
 
 	const translateIcon = document.createElement( 'img' );
 	translateIcon.title = strings.getKey( 'toolbar/translate' );
-	translateIcon.src = translateIconSrc;
+	translateIcon.src = "/file=extensions/sd-webui-3d-editor/javascript/lazyload/b6f238a093e0e137d7f9124d253c9123.svg"
+	//translateIcon.src = translateIconSrc;
 
 	const translate = new UIButton();
 	translate.dom.className = 'Button selected';
@@ -29,7 +30,7 @@ function Toolbar( editor ) {
 
 	const rotateIcon = document.createElement( 'img' );
 	rotateIcon.title = strings.getKey( 'toolbar/rotate' );
-	rotateIcon.src = rotateIconSrc;
+	rotateIcon.src = "/file=extensions/sd-webui-3d-editor/javascript/lazyload/d6ee454aa9e9f9234769b5b936224227.svg"
 
 	const rotate = new UIButton();
 	rotate.dom.appendChild( rotateIcon );
@@ -42,7 +43,7 @@ function Toolbar( editor ) {
 
 	const scaleIcon = document.createElement( 'img' );
 	scaleIcon.title = strings.getKey( 'toolbar/scale' );
-	scaleIcon.src = scaleIconSrc;
+	scaleIcon.src = "/file=extensions/sd-webui-3d-editor/javascript/lazyload/ac954a9bdf552ab0fb86d5a9b726caf5.svg";
 
 	const scale = new UIButton();
 	scale.dom.appendChild( scaleIcon );
