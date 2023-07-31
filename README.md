@@ -21,6 +21,12 @@ Just like you install other extension of webui:
 3. install
 4. go to Installed, apply and restart UI
 
+## How to build
+1. download NodeJs, and install
+2. run npm install
+3. run webpack --mode production
+4. 
+
 ## Known Issues
 1. currently, you need to manual resize browser at the first time to show up the canvas (I will try to figure out the solution soon)
 

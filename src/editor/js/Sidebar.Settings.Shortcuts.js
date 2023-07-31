@@ -138,7 +138,7 @@ function SidebarSettingsShortcuts( editor ) {
 
 				if ( IS_MAC ? event.metaKey : event.ctrlKey ) {
 
-					event.preventDefault(); // Prevent browser specific hotkeys
+					// event.preventDefault(); // Prevent browser specific hotkeys
 
 					if ( event.shiftKey ) {
 
